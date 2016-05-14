@@ -1,6 +1,6 @@
-# UPenn ESE 650 Learning in Robotics, Project 1: Color Segmentation Based on Gaussian Mixture Model
+## UPenn ESE 650 Learning in Robotics, Project 1: Color Segmentation Based on Gaussian Mixture Model
 
-## By Max Lu
+### By Max Lu
 
 1. Put test cases into folder ./Test_set
 2. Execute code.m
