@@ -28,8 +28,6 @@ for i = 1:max(max(L))
     
     bb = regionprops(L==i, {'Area', 'BoundingBox'});
     if size(bb.BoundingBox,1) ~= 0
-%         width = abs(bb.BoundingBox(1)-bb.BoundingBox(3));
-%         height = abs(bb.BoundingBox(2)-bb.BoundingBox(4);
         ratio = bb.BoundingBox(4)/bb.BoundingBox(3);
         if~(ratio>0.8 && ratio<2.7)
             continue;
@@ -49,20 +47,9 @@ npix = sum(sum(BW))+1;
 npx = -npix^(0.01);
 d = polyval(w, npx)-0.1;
 
-% subplot(1,2,1), imshow(imtest_1);
-% subplot(1,2,2), imshow(BW);
-
 cc= regionprops(BW,'centroid');
 bb = regionprops(BW, {'Area', 'BoundingBox'});
-% imshow(imtest_1);
 
-% if size(cc,1) ~= 0
-% hold on;
-% plot(cc.Centroid(:,1), cc.Centroid(:,2), 'b+');
-% hold on;
-% rectangle('Position',[stats2.BoundingBox(1),stats2.BoundingBox(2),stats2.BoundingBox(3),stats2.BoundingBox(4)],...
-%      'EdgeColor','y','LineWidth',1 );
-% end
 x = 0;
 y = 0;
 
